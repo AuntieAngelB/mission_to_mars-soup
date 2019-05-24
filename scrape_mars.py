@@ -49,11 +49,11 @@ def mars_news(browser):
     results2 = soup.find('div', class_='article_teaser_body')
 
     news_p = results2.text.lstrip()
-    costa_data = {
+    mars_news = {
         "news_title": news_title,
         "teaser_paragraph": news_p,
     }
-    return costa_data
+    return mars_news
 
 def featured_image(browser):
     # URL
@@ -86,7 +86,7 @@ def twitter_weather(browser):
     soup = bs(html, "html.parser")
 
     result=soup.find('p', class_='TweetTextSize TweetTextSize--normal js-tweet-text tweet-text').text
-
+    mars_weather = [] 
     mars_weather_report = result
         mars_weather = {
         "Mars Weather Report": mars_weather_report,
