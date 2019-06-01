@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup as bs
 from splinter import Browser
 import time
 import pandas as pd
+from flask_pymongo import PyMongo
 
 ################# Scrape Nasa.gov Mars for latest news #############
 def init_browser():
